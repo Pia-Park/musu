@@ -2,16 +2,17 @@ import axios from "axios";
 
 /**
  * Get products data from BASE
- * @return {[object]} the list of retrieved Instagram data including...
- *    - id: uniqu id
- *    - media_url: image url
- *    - timestamp: the time of image user post
+ * @return {[object]} the list of retrieved BASE product data
  */
-export async function getBaseProducts(instaToken) {
-  return await axios.get(process.env.REACT_APP_INSTA_BASE_END + "/me/media", {
-    params: {
-      fields: "media_url,timestamp",
-      access_token: instaToken,
-    },
-  });
+export async function getBaseProducts(baseToken) {
+  return await axios.get(
+    process.env.REACT_APP_BASE_BASE_ENDPOINT + "/1/items",
+    {
+      params: {
+        visible: "1",
+        order: "created",
+        sort: "desc",
+      },
+    }
+  );
 }

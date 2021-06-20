@@ -4,7 +4,7 @@ import { TokenContext } from "../App";
 import { getInstaImages } from "../api/instagramAPI";
 
 const Instagram = () => {
-  const [instaImages, setinstaImages] = useState();
+  const [instagramImages, setInstagramImages] = useState();
   const tokens = useContext(TokenContext);
 
   useEffect(() => {
@@ -17,15 +17,15 @@ const Instagram = () => {
       const sortedImageUrls = res["data"]["data"].sort(
         (x, y) => x["timestamp"] - y["timestamp"]
       );
-      setinstaImages(sortedImageUrls);
+      setInstagramImages(sortedImageUrls);
     };
     getTokens();
   }, [tokens]);
 
   return (
     <div>
-      {instaImages &&
-        instaImages.map((instaObj) => (
+      {instagramImages &&
+        instagramImages.map((instaObj) => (
           <p key={instaObj.id}>{instaObj.media_url}</p>
         ))}
     </div>
