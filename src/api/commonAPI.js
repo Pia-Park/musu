@@ -6,7 +6,7 @@ import axios from "axios";
  */
 export async function setAccessToken() {
   const res = await axios.get(
-    process.env.REACT_APP_AWS_BASE_END + "/access-token"
+    process.env.REACT_APP_AWS_BASE_ENDPOINT + "/access-token"
   );
   const instaToken = res["data"]["instagram"]["currentToken"]["accessToken"];
   const baseToken = res["data"]["base"]["currentToken"]["accessToken"];
