@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect, createContext } from "react";
+
+import "./App.css";
+import { setAccessToken } from "./api/commonAPI";
+import Instagram from "./components/Instagram";
+
+export const TokenContext = createContext();
 
 function App() {
+  const [tokens, setTokens] = useState();
+
+  useEffect(() => {
+    // Get Instagram access token and BASE access token
+    const getTokens = async () => {
+      const [instaToken, baseToken] = await setAccessToken();
+      setTokens([instaToken, baseToken]);
+    };
+    getTokens();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+      <TokenContext.Provider value={tokens}>
+        <Instagram />
+      </TokenContext.Provider>
     </div>
   );
 }
