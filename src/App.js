@@ -3,6 +3,8 @@ import { useState, useEffect, createContext } from "react";
 import "./App.css";
 import { setAccessToken } from "./api/commonAPI";
 import Instagram from "./components/Instagram";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
 
 export const TokenContext = createContext();
 
@@ -20,6 +22,8 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar/>
+      <HeroSection/>
       <header className="App-header"></header>
       <TokenContext.Provider value={tokens}>
         <Instagram />
