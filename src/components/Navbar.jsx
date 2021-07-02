@@ -1,50 +1,51 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
-import { MemoryRouter } from "react-router-dom"
-import { HashLink } from "react-router-hash-link";
+// import { MemoryRouter } from "react-router-dom"
+// import { HashLink, NavHashLink } from "react-router-hash-link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 function Navbar() {
 	const [click, setClick] = useState(false);
 	const handleClick = () => setClick(!click);
-	const closeMobileMenu = () => setClick(false)
+	const closeMobileMenu = () => setClick(false);
 
 
 	return (
 		<>
 			<nav className="navbar">
-				<MemoryRouter>
+				{/* <MemoryRouter> */}
 
 					<div className="navbar-container">
-						<HashLink smooth to="/" className="navbar-logo" >musu<i className="fab fa-typo3" />
-						</HashLink>
+						<AnchorLink href="/" className="navbar-logo" >musu<i className="fab fa-typo3" />
+						</AnchorLink>
 						<div className="menu-icon" onClick={handleClick}>
 							<i className={click ? "fas fa-times" : "fas fa-bars"} />
 						</div>
 						<ul className={click ? "nav-menu active" : "nav-menu"}>
 							<li className="nav-item">
-								<HashLink smooth to="#home" onClick={closeMobileMenu} className="nav-links">
+								<AnchorLink href="#home" onClick={closeMobileMenu} className="nav-links">
 									Home
-							</HashLink>
+							</AnchorLink>
 							</li>
 							<li className="nav-item">
-								<HashLink smooth to="#about" onClick={closeMobileMenu} className="nav-links">
+								<AnchorLink href="#about" onClick={closeMobileMenu} className="nav-links">
 									About
-							</HashLink>
+							</AnchorLink>
 							</li>
 							<li className="nav-item">
-								<HashLink smooth to="#online-shop" onClick={closeMobileMenu} className="nav-links">
+								<AnchorLink href="#shop" onClick={closeMobileMenu} className="nav-links">
 									Online Shop
-							</HashLink>
+							</AnchorLink>
 							</li>
 							<li className="nav-item">
-								<HashLink smooth to="#contact" onClick={closeMobileMenu} className="nav-links">
+								<AnchorLink href="#contact" onClick={closeMobileMenu} className="nav-links">
 									Contact
-							</HashLink>
+							</AnchorLink>
 							</li>
 						</ul>
 					</div>
-				</MemoryRouter>
+				{/* </MemoryRouter> */}
 			</nav>
 		</>
 	)
