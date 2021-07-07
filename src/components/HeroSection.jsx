@@ -4,6 +4,7 @@ import './HeroSection.css';
 import "./slick.css";
 import "./slick-theme.css";
 
+
 import Slider from "react-slick";
 
 export default class SimpleSlider extends Component {

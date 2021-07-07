@@ -1,10 +1,8 @@
 .navbar {
-  /* background: red; */
   height: 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -12,16 +10,16 @@
 
 .navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   max-width: 1500px;
+  width: 100vw;
 }
 
 .navbar-logo {
   color: #fff;
-  justify-self: start;
-  margin-left: 20px;
+  margin-left: 2.1rem;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -39,10 +37,9 @@
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
-  text-align: center;
   width: 60vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 3.5rem;
 }
 
 .nav-item {
@@ -75,33 +72,28 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
+@media screen and (max-width: 768px) {
   .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 60vh;
-    position: absolute;
-    top: 80px;
-    left: 100%;
-    opacity: 1;
-    transition: all 0.5s ease;
+    display: none;
   }
 
   .nav-menu.active {
-    background: rgb(35,35,35,0.6);
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
+    width: 100vw;
+    display: flex;
+    height: 60vh;
+    position: absolute;
+    top: 80px;
+    flex-direction: column;
+    background: rgb(35, 35, 35, 0.6);
     z-index: 1;
+    animation-name: slidein; animation-duration: 0.5s;
+    text-align: center;
   }
 
+  @keyframes slidein { from { transform: translateX(100vw); } to { transform: translateX(0px); } }
+
+
   .nav-links {
-    text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
@@ -115,9 +107,8 @@
 
   .navbar-logo {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    left: 1rem;
+    margin-left: 0px;
   }
 
   .menu-icon {
@@ -135,24 +126,4 @@
     font-size: 2rem;
   }
 
-  .nav-links-mobile {
-    display: block;
-    text-align: center;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: #fff;
-    padding: 14px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-  }
-
-  .nav-links-mobile:hover {
-    background: #fff;
-    color: #242424;
-    transition: 250ms;
-  }
 }
