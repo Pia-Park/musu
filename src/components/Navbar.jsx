@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
-// import { MemoryRouter } from "react-router-dom"
-// import { HashLink, NavHashLink } from "react-router-hash-link";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
@@ -14,7 +12,6 @@ function Navbar() {
 	return (
 		<>
 			<nav className="navbar">
-				{/* <MemoryRouter> */}
 
 					<div className="navbar-container">
 						<AnchorLink href="/" className="navbar-logo" >musu<i className="fab fa-typo3" />
@@ -45,7 +42,6 @@ function Navbar() {
 							</li>
 						</ul>
 					</div>
-				{/* </MemoryRouter> */}
 			</nav>
 		</>
 	)

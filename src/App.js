@@ -26,7 +26,6 @@ function App() {
       <HeroSection/>
       <header className="App-header"></header>
       <TokenContext.Provider value={tokens}>
-        <Instagram />
       </TokenContext.Provider>
     </div>
   );
