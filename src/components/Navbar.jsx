@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
-// import { MemoryRouter } from "react-router-dom"
-// import { HashLink, NavHashLink } from "react-router-hash-link";
+
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
