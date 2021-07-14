@@ -35,4 +35,10 @@
 	.about-detail {
     flex-direction: column;
 	}
+
+	.about-logo {
+		padding: 0px;
+		width: 13rem;
+		height: 13rem;
+		}
 }
