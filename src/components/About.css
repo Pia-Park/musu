@@ -1,0 +1,44 @@
+
+.about-container{
+	width: 100%;
+	margin-bottom: 3rem;
+}
+.title {
+	text-align: center;
+	margin-top: 5rem;
+
+}
+.about-detail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.about-logo{
+	padding: 5.5rem;
+
+}
+.contents-title {
+	margin-bottom: 1.5rem;
+}
+.contents {
+	line-height: 2.3rem;
+}
+.about-article {
+	padding: 3rem;
+
+}
+
+@media screen and (max-width: 800px) {
+	.about-detail {
+    flex-direction: column;
+	}
+
+	.about-logo {
+		padding: 0px;
+		width: 13rem;
+		height: 13rem;
+		}
+}

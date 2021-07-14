@@ -6,6 +6,8 @@ import Instagram from "./components/Instagram";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import About from "./components/About";
+
 
 export const TokenContext = createContext();
 
@@ -25,6 +27,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <HeroSection/>
+      <About/>
       <Footer/>
       <header className="App-header"></header>
       <TokenContext.Provider value={tokens}>

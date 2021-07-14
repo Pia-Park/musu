@@ -1,3 +1,7 @@
+.hero-wrapper {
+  margin-top: -80px;
+}
+
 .hero-container {
   /* background: url('images/hero.jpg') center center/cover no-repeat; */
   height: 100vh;
