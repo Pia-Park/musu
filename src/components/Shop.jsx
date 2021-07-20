@@ -1,13 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Shop.css"
 
+
 function Shop() {
+	const [items, setItems] = useState([]);
+	const [visible, setVisible] = useState(0);
+
+	const showMoreItems = () => {
+		setVisible((prevValue) => prevValue + 4);
+	}
+
+	useEffect(() => {
+		fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
+			.then((res) => res.json())
+			.then((data) => setItems(data.items))
+	}, [])
+
+
 	return (
 		<section>
 			<div className="shop-container">
 				<div className="shop-wrapper">
-					<div className="shop-img">
-						<img src={`${process.env.PUBLIC_URL}/img/shop1.png`} alt="taima"/>
+					<h2 className="title">Online Shop</h2>
+					<div >
+						<img src={`${process.env.PUBLIC_URL}/img/shop1.png`} alt="taimakazari" className="shop-img"
+						/>
+						<div className="items-container">
+							{items.slice(0, visible).map((item) => (
+								<div className="sample3" key={item.item_id}>
+									<img src={item.img1_origin} alt="img" />
+									<div className="mask">
+										<h3 className="caption">{item.title}</h3>
+										<h3>{item.price}</h3>
+									</div>
+								</div>
+							))}
+						</div>
+						<button onClick={showMoreItems}>Load more</button>
+
+					</div>
+
+
+
+
+					<div >
+						<img src={`${process.env.PUBLIC_URL}/img/shop2.png`} alt="okou" className="shop-img" />
+					</div>
+					<div >
+						<img src={`${process.env.PUBLIC_URL}/img/shop3.png`} alt="kazarimusubi" className="shop-img" />
 					</div>
 
 				</div>

@@ -1,4 +1,77 @@
-/* .shop-img {
-	width: 100px;
+.shop-container {
+	width: 100vw;
+	padding: 0 4rem;
+	margin-bottom: 3rem;
 
-} */
+}
+
+
+.title{
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.shop-img {
+	width: 100%;
+}
+
+.shop-detail{
+	padding: 2rem;
+	text-align: center;
+}
+
+.items-container {
+	width: 100%;
+	max-width: 1300px;
+	margin: 20px auto;
+	padding: 0 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+
+}
+
+.sample3 {
+	overflow: hidden;
+	position: relative;
+
+}
+.caption {
+	font-size: 1.5rem;
+	color: #fff;
+}
+.mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 1s ease;
+	transition: all 1s ease;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.sample3:hover .mask {
+	opacity: 1;	/* マスクを表示する */
+	padding-left: 1rem;	/* 右にずらす */
+}
+img {
+	width: 100%;
+}
+
+button {
+border: none;
+outline: none;
+width: 100%;
+padding: 16px 0;
+margin: 10px 0 0 0;
+background: #373b56;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+}
