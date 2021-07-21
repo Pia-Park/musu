@@ -5,10 +5,15 @@ import "./Shop.css"
 function Shop() {
 	const [items, setItems] = useState([]);
 	const [visible, setVisible] = useState(0);
+	const [click, setClick] = useState(false);
+
+	const handleClick = () => setClick(!click);
 
 	const showMoreItems = () => {
 		setVisible((prevValue) => prevValue + 4);
 	}
+
+
 
 	useEffect(() => {
 		fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
@@ -27,7 +32,7 @@ function Shop() {
 
 							<img src={`${process.env.PUBLIC_URL}/img/newShop1.png`} alt="taimakazari" className="shop-img"
 							/>
-							<button className="show-item">商品ページを開く</button>
+							<button className="show-item" onClick={handleClick} >{　click? '商品ページを閉じる':'商品ページを開く'}<i className={click ? "fas fa-angle-up" : "fas fa-angle-down"} /></button>
 						</div>
 
 						<div className="items-container">

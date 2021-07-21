@@ -19,7 +19,7 @@
 }
 
 .show-item {
-	color: #000;
+	color: #FFF49A;
 	cursor: pointer;
 	font-size: 2rem;
 	border: none;
@@ -160,4 +160,11 @@ img {
 	color: #fff;
 	font-size: 18px;
 	cursor: pointer;
+}
+
+.fa-angle-up {
+	color: #fff;
+}
+.fa-angle-down {
+	color: #fff;
 }
