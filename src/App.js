@@ -2,7 +2,7 @@ import { useState, useEffect, createContext } from "react";
 
 import "./App.css";
 import { setAccessToken } from "./api/commonAPI";
-import Instagram from "./components/Instagram";
+// import Instagram from "./components/Instagram";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
