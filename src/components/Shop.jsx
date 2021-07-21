@@ -19,9 +19,9 @@ function Shop() {
 
 	return (
 		<section>
-			<div className="shop-container">
+			<div className="shop-container" id="shop">
 				<div className="shop-wrapper">
-					<h2 className="title">Online Shop</h2>
+					<h2 className="shop-title">Online Shop</h2>
 					<div >
 						<div class="img-box">
 

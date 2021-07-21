@@ -1,0 +1,53 @@
+.about-container {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+.title {
+	text-align: center;
+	margin-top: 5rem;
+}
+.about-detail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5.5rem;
+}
+
+.about-logo {
+	width: 50%;
+	padding: 10rem;
+}
+.contents-title {
+	margin-bottom: 1.5rem;
+}
+.contents {
+	line-height: 2.3rem;
+}
+.about-article {
+	padding: 3rem;
+}
+@media screen and (max-width: 1200px) {
+	.about-logo {
+		padding: 6rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.about-logo {
+		padding: 3rem;
+	}
+}
+@media screen and (max-width: 800px) {
+	.about-detail {
+		flex-direction: column;
+		padding: 3rem 1rem;
+
+	}
+
+	.about-logo {
+		padding: 0px;
+		width: 13rem;
+		height: 13rem;
+		margin-bottom: 3rem;
+	}
+}
