@@ -5,6 +5,7 @@ import { setAccessToken } from "./api/commonAPI";
 import Instagram from "./components/Instagram";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import Footer from "./components/Footer";
 import About from "./components/About";
 
 
@@ -27,6 +28,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <About/>
+      <Footer/>
       <header className="App-header"></header>
       <TokenContext.Provider value={tokens}>
       </TokenContext.Provider>

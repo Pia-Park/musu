@@ -23,22 +23,22 @@ function Navbar() {
 							<li className="nav-item">
 								<AnchorLink href="#home" onClick={closeMobileMenu} className="nav-links">
 									Home
-							</AnchorLink>
+								</AnchorLink>
 							</li>
 							<li className="nav-item">
 								<AnchorLink href="#about" onClick={closeMobileMenu} className="nav-links">
 									About
-							</AnchorLink>
+								</AnchorLink>
 							</li>
 							<li className="nav-item">
 								<AnchorLink href="#shop" onClick={closeMobileMenu} className="nav-links">
 									Online Shop
-							</AnchorLink>
+								</AnchorLink>
 							</li>
 							<li className="nav-item">
 								<AnchorLink href="#contact" onClick={closeMobileMenu} className="nav-links">
 									Contact
-							</AnchorLink>
+								</AnchorLink>
 							</li>
 						</ul>
 					</div>
