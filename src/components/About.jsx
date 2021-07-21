@@ -4,8 +4,8 @@ import "../App.css"
 
 function About() {
 	return (
-		<section className="about-container">
-			<h2 className="title">About</h2>
+		<section className="about-container" id="about">
+			<h2 className="title" >About</h2>
 			<div className="about-detail">
 				<img src={`${process.env.PUBLIC_URL}/img/logo-musu.png`} alt="logo2" className="about-logo" />
 				<div className="about-article">
