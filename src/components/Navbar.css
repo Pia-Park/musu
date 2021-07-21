@@ -69,7 +69,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 785px) {
   .nav-menu {
     display: none;
   }

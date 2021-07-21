@@ -23,8 +23,13 @@ function Shop() {
 				<div className="shop-wrapper">
 					<h2 className="title">Online Shop</h2>
 					<div >
-						<img src={`${process.env.PUBLIC_URL}/img/shop1.png`} alt="taimakazari" className="shop-img"
-						/>
+						<div class="img-box">
+
+							<img src={`${process.env.PUBLIC_URL}/img/newShop1.png`} alt="taimakazari" className="shop-img"
+							/>
+							<button className="show-item">商品ページを開く</button>
+						</div>
+
 						<div className="items-container">
 							{items.slice(0, visible).map((item) => (
 								<div className="sample3" key={item.item_id}>
@@ -36,7 +41,7 @@ function Shop() {
 								</div>
 							))}
 						</div>
-						<button onClick={showMoreItems}>Load more</button>
+						<button className="show-more-button" onClick={showMoreItems}>Load more</button>
 
 					</div>
 
