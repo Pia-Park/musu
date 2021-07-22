@@ -1,24 +1,49 @@
 import React, { useState, useEffect } from 'react'
 import "./Shop.css"
+import ShopBox from './ShopBox';
+
 
 
 function Shop() {
-	const [items, setItems] = useState([]);
-	const [visible, setVisible] = useState(0);
-	const [click, setClick] = useState(false);
 
-	const handleClick = () => setClick(!click);
+	//top
+	const [topItems, setTopItems] = useState([]);
+	const [topVisible, setTopVisible] = useState(0);
+	const [topIsOpen, setTopIsOpen] = useState(false);
 
-	const showMoreItems = () => {
-		setVisible((prevValue) => prevValue + 4);
+	const topHandleClick = () => setTopIsOpen(!topIsOpen);
+	const topShowMoreItems = () => {
+		setTopVisible((prevValue) => prevValue + 4);
 	}
+	const topHandleClose = () => setTopVisible(0);
 
+	//middle
+	const [middleItems, setMiddleItems] = useState([]);
+	const [middleVisible, setMiddleVisible] = useState(0);
+	const [middleIsOpen, setMiddleIsOpen] = useState(false);
 
+	const middleHandleClick = () => setMiddleIsOpen(!middleIsOpen);
+	const middleShowMoreItems = () => {
+		setMiddleVisible((prevValue) => prevValue + 4);
+	}
+	const middleHandleClose = () => setMiddleVisible(0);
 
+	//bottom
+	const [bottomItems, setBottomItems] = useState([]);
+	const [bottomVisible, setBottomVisible] = useState(0);
+	const [bottomIsOpen, setBottomIsOpen] = useState(false);
+
+	const bottomHandleClick = () => setBottomIsOpen(!bottomIsOpen);
+	const bottomShowMoreItems = () => {
+		setBottomVisible((prevValue) => prevValue + 4);
+	}
+	const bottomHandleClose = () => setBottomVisible(0);
+
+	//there is no middle and bottom items now
 	useEffect(() => {
 		fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
 			.then((res) => res.json())
-			.then((data) => setItems(data.items))
+			.then((data) => setTopItems(data.items))
 	}, [])
 
 
@@ -27,38 +52,9 @@ function Shop() {
 			<div className="shop-container" id="shop">
 				<div className="shop-wrapper">
 					<h2 className="shop-title">Online Shop</h2>
-					<div >
-						<div class="img-box">
-
-							<img src={`${process.env.PUBLIC_URL}/img/newShop1.png`} alt="taimakazari" className="shop-img"
-							/>
-							<button className="show-item" onClick={handleClick} >{　click? '商品ページを閉じる':'商品ページを開く'}<i className={click ? "fas fa-angle-up" : "fas fa-angle-down"} /></button>
-						</div>
-
-						<div className="items-container">
-							{items.slice(0, visible).map((item) => (
-								<div className="sample3" key={item.item_id}>
-									<img src={item.img1_origin} alt="img" />
-									<div className="mask">
-										<h3 className="caption">{item.title}</h3>
-										<h3>{item.price}</h3>
-									</div>
-								</div>
-							))}
-						</div>
-						<button className="show-more-button" onClick={showMoreItems}>Load more</button>
-
-					</div>
-
-
-
-
-					<div >
-						<img src={`${process.env.PUBLIC_URL}/img/shop2.png`} alt="okou" className="shop-img" />
-					</div>
-					<div >
-						<img src={`${process.env.PUBLIC_URL}/img/shop3.png`} alt="kazarimusubi" className="shop-img" />
-					</div>
+					<ShopBox image="shop-taimakazari.png" handleClick={topHandleClick} handleClose={topHandleClose} showMoreItems={topShowMoreItems} isOpen={topIsOpen} items={topItems} visible={topVisible} />
+					<ShopBox image="shop-okou.png" handleClick={middleHandleClick} handleClose={middleHandleClose} showMoreItems={middleShowMoreItems} isOpen={middleIsOpen} items={topItems} visible={middleVisible} />
+					<ShopBox image="shop-kazarimusubi.png" handleClick={bottomHandleClick} handleClose={bottomHandleClose} showMoreItems={bottomShowMoreItems} isOpen={bottomIsOpen} items={topItems} visible={bottomVisible} />
 
 				</div>
 			</div>
