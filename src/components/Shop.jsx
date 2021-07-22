@@ -52,8 +52,11 @@ function Shop() {
 			<div className="shop-container" id="shop">
 				<div className="shop-wrapper">
 					<h2 className="shop-title">Online Shop</h2>
-					<ShopBox image="shop-taimakazari.png" handleClick={topHandleClick} handleClose={topHandleClose} showMoreItems={topShowMoreItems} isOpen={topIsOpen} items={topItems} visible={topVisible} />
+					<ShopBox image="shop-taimakazari.png" handleClick={topHandleClick} handleClose={topHandleClose} showMoreItems={topShowMoreItems} isOpen={topIsOpen} items={topItems} visible={topVisible}
+					children="古来より「大麻」は水でも塩でも祓い清められない罪穢れ（氣枯れ）を祓い清める強力な力があるとされています。「麻」は神様のしるし、神様の宿る神聖な繊維とされ飾っていただくと場のエネルギーを見守り「氣」を整えてくれるでしょう。"/>
+
 					<ShopBox image="shop-okou.png" handleClick={middleHandleClick} handleClose={middleHandleClose} showMoreItems={middleShowMoreItems} isOpen={middleIsOpen} items={topItems} visible={middleVisible} />
+					
 					<ShopBox image="shop-kazarimusubi.png" handleClick={bottomHandleClick} handleClose={bottomHandleClose} showMoreItems={bottomShowMoreItems} isOpen={bottomIsOpen} items={topItems} visible={bottomVisible} />
 
 				</div>

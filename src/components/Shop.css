@@ -4,6 +4,7 @@
 	margin-bottom: 3rem;
 }
 
+
 .shop-title {
 	text-align: center;
 	margin-top: 5rem;
@@ -31,6 +32,11 @@
 	bottom: 1.5rem;
 }
 
+.shop-detail {
+	padding: 2rem 18rem;
+	text-align: center;
+}
+
 @media screen and (max-width: 1300px) {
 	.show-item {
 		font-size: 1.8rem;
@@ -44,12 +50,18 @@
 		right: 3rem;
 		bottom: 1rem;
 	}
+	.shop-detail {
+		padding: 2rem 15rem;
+	}
 }
 @media screen and (max-width: 900px) {
 	.show-item {
 		font-size: 1.3rem;
 		right: 2rem;
 		bottom: 1rem;
+	}
+	.shop-detail {
+		padding: 2rem 10rem;
 	}
 }
 @media screen and (max-width: 784px) {
@@ -60,6 +72,9 @@
 	}
 	.shop-container {
 		padding: 0 1rem;
+	}
+	.shop-detail {
+		padding: 2rem 4rem;
 	}
 }
 @media screen and (max-width: 700px) {
@@ -104,10 +119,6 @@
 }
 
 
-.shop-detail {
-	padding: 2rem;
-	text-align: center;
-}
 
 .items-container {
 	width: 100%;
@@ -115,7 +126,7 @@
 	margin: 20px auto;
 	padding: 0 3rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	gap: 2rem;
 }
 
@@ -154,8 +165,8 @@ img {
 	border: none;
 	outline: none;
 	width: 100%;
-	padding: 16px 0;
-	margin: 10px 0 0 0;
+	padding: 1rem 0;
+	margin: 2rem 0;
 	background: #505D66;
 	color: #fff;
 	font-size: 18px;
