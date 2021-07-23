@@ -1,11 +1,18 @@
-.about-container {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+.about-container{
 	width: 100%;
 	margin-bottom: 3rem;
 }
 .title {
 	text-align: center;
-	margin-top: 5rem;
+	margin-top: 8rem;
+	margin-bottom: 3rem;
+	font-family: 'Noto Serif JP', serif;
+	font-weight: 200;
+	color: #515D66;
 }
+
 .about-detail {
 	display: flex;
 	justify-content: center;
@@ -18,10 +25,16 @@
 	padding: 10rem;
 }
 .contents-title {
+	font-family: 'Noto Serif JP', serif;
+	font-weight: 600;
 	margin-bottom: 1.5rem;
+	font-size: 1.4rem;
 }
 .contents {
-	line-height: 2.3rem;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 0.9rem;
+	font-weight: 200;
+	line-height: 2rem;
 }
 .about-article {
 	padding: 3rem;
