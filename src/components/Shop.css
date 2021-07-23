@@ -37,6 +37,17 @@
 	text-align: center;
 }
 
+.items-container {
+	width: 100%;
+	max-width: 1300px;
+	margin: 20px auto;
+	padding: 0 3rem;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+
+	gap: 2rem;
+}
+
 @media screen and (max-width: 1300px) {
 	.show-item {
 		font-size: 1.8rem;
@@ -76,6 +87,10 @@
 	.shop-detail {
 		padding: 2rem 4rem;
 	}
+	.items-container {
+		grid-template-columns: repeat(2,1fr);
+	}
+
 }
 @media screen and (max-width: 700px) {
 	.show-item {
@@ -116,18 +131,6 @@
 	.shop-container {
 		padding: 1rem;
 	}
-}
-
-
-
-.items-container {
-	width: 100%;
-	max-width: 1300px;
-	margin: 20px auto;
-	padding: 0 3rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	gap: 2rem;
 }
 
 .sample3 {

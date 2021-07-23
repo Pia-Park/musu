@@ -39,7 +39,7 @@ function Shop() {
 	}
 	const bottomHandleClose = () => setBottomVisible(0);
 
-	//there is no middle and bottom items now
+	//there are no middle and bottom items now
 	useEffect(() => {
 		fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
 			.then((res) => res.json())
@@ -56,7 +56,7 @@ function Shop() {
 					children="古来より「大麻」は水でも塩でも祓い清められない罪穢れ（氣枯れ）を祓い清める強力な力があるとされています。「麻」は神様のしるし、神様の宿る神聖な繊維とされ飾っていただくと場のエネルギーを見守り「氣」を整えてくれるでしょう。"/>
 
 					<ShopBox image="shop-okou.png" handleClick={middleHandleClick} handleClose={middleHandleClose} showMoreItems={middleShowMoreItems} isOpen={middleIsOpen} items={topItems} visible={middleVisible} />
-					
+
 					<ShopBox image="shop-kazarimusubi.png" handleClick={bottomHandleClick} handleClose={bottomHandleClose} showMoreItems={bottomShowMoreItems} isOpen={bottomIsOpen} items={topItems} visible={bottomVisible} />
 
 				</div>

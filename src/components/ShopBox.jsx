@@ -12,9 +12,9 @@ function ShopBox(props) {
 					{props.isOpen ? <div onClick={props.handleClose} >商品ページを閉じる <i className="fas fa-angle-up" /></div> : <div onClick={props.showMoreItems}>商品ページを開く<i className="fas fa-angle-down" /></div>}
 				</button>
 			</div>
-	{props.isOpen ? <div　className="shop-detail">{props.children}</div> :""}
+			{props.isOpen ? <div className="shop-detail">{props.children}</div> : ""}
 
-
+			
 			<div className="items-container">
 				{props.items.slice(0, props.visible).map((item) => (
 					<div className="sample3" key={item.item_id}>
