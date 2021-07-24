@@ -3,9 +3,8 @@ import ShopBox from "./ShopBox";
 import productInfo from "../data/product.json";
 
 function Shop() {
-  const product = productInfo.data;
-  console.log(product);
-  return (
+
+	return (
     <section>
       <div className="shop-container" id="shop">
         <div className="shop-wrapper">
