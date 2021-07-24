@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 
 import "./App.css";
-import Instagram from "./components/Instagram";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import { getBaseProducts } from "./api/baseAPI";
+import { getInstaImages } from "./api/instagramAPI"
 
 function App() {
   const [items, setItems] = useState();
+  const [insta, setInsta] = useState();
 
   useEffect(() => {
     const getItems = async () => {
@@ -17,10 +18,16 @@ function App() {
       setItems(JSON.parse(resItems.data)["items"]);
     };
 
+    const getInsta = async () => {
+       const res = await getInstaImages()
+       setInsta(res)
+    }
     getItems();
+    getInsta();
   }, []);
 
-  console.log(items)
+  console.log("items", items)
+  console.log("insta", insta)
 
   return (
     <div className="App">
