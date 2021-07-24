@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Footer.css"
-import AnchorLink from "react-anchor-link-smooth-scroll";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Footer() {
 	return (
