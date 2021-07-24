@@ -1,36 +1,62 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+
+import Accordion from "./Accordion";
+
+const INIT_VISIBLE_COUNT = 0;
+const VISIBLE_COUNT = 4;
 
 function ShopBox(props) {
+  const [items, setItems] = useState([]);
+  const [visible, setVisible] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const changeActiveStatus = () => {
+    setVisible(isOpen ? INIT_VISIBLE_COUNT : VISIBLE_COUNT);
+    setIsOpen(!isOpen);
+  };
 
-	return (
-		<>
-			<div class="img-box">
-				<img src={`${process.env.PUBLIC_URL}/img/${props.image}`} alt="taimakazari" className="shop-img"
-				/>
-				<button className="show-item" onClick={props.handleClick} >
-					{props.isOpen ? <div onClick={props.handleClose} >商品ページを閉じる <i className="fas fa-angle-up" /></div> : <div onClick={props.showMoreItems}>商品ページを開く<i className="fas fa-angle-down" /></div>}
-				</button>
-			</div>
-			{props.isOpen ? <div className="shop-detail">{props.children}</div> : ""}
+  const showMoreItemClicked = () => {
+    setVisible((prevValue) => prevValue + 4);
+  };
 
-			
-			<div className="items-container">
-				{props.items.slice(0, props.visible).map((item) => (
-					<div className="sample3" key={item.item_id}>
-						<img src={item.img1_origin} alt="img" />
-						<div className="mask">
-							<h3 className="caption">{item.title}</h3>
-							<h3>{item.price}</h3>
-						</div>
-					</div>
-				))}
-			</div>
-			{props.items.length > props.visible & props.isOpen ?
-				<button className="show-more-button" onClick={props.showMoreItems}>もっと見る　<i className="fas fa-angle-down" /></button> : ""
-			}
-		</>
-	)
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
+      .then((res) => res.json())
+      .then((data) => setItems(data.items));
+  }, []);
+
+  return (
+    <>
+      <Accordion
+        image={props.image}
+        isOpen={isOpen}
+        handleClick={changeActiveStatus}
+      />
+
+      {isOpen ? <div className="shop-detail">{props.children}</div> : ""}
+
+      <div className="items-container">
+        {items.slice(0, visible).map((item) => (
+          <div className="sample3" key={item.item_id}>
+            <img src={item.img1_origin} alt="img" />
+            <div className="mask">
+              <h3 className="caption">{item.title}</h3>
+              <h3>{item.price}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {(items.length > visible) & isOpen ? (
+        <button className="show-more-button" onClick={showMoreItemClicked}>
+          もっと見る
+          <i className="fas fa-angle-down" />
+        </button>
+      ) : (
+        ""
+      )}
+    </>
+  );
 }
 
-export default ShopBox
+export default ShopBox;
