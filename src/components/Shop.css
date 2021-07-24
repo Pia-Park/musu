@@ -43,7 +43,6 @@
 	margin: 20px auto;
 	padding: 0 3rem;
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
 
 	gap: 2rem;
 }

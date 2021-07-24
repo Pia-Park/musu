@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Accordion(props) {
   return (
-    <div class="img-box">
+    <div className="img-box">
       <img
         src={`${process.env.PUBLIC_URL}/img/${props.image}`}
         alt="taimakazari"
