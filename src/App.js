@@ -14,8 +14,8 @@ function App() {
 
   useEffect(() => {
     const getItems = async () => {
-      const resItems = await getBaseProducts("3661481");
-      setItems(JSON.parse(resItems.data)["items"]);
+      const resItems = await getBaseProducts();
+      setItems(resItems['data']);
     };
 
     const getInsta = async () => {
