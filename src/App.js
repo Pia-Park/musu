@@ -1,39 +1,44 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
-import { setAccessToken } from "./api/commonAPI";
-// import Instagram from "./components/Instagram";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Shop from "./components/Shop";
 import Footer from "./components/Footer";
 import About from "./components/About";
-
-
-export const TokenContext = createContext();
+import { getBaseProducts } from "./api/baseAPI";
+import { getInstaImages } from "./api/instagramAPI"
 
 function App() {
-  const [tokens, setTokens] = useState();
+  const [items, setItems] = useState();
+  const [insta, setInsta] = useState();
 
   useEffect(() => {
-    // Get Instagram access token and BASE access token
-    const getTokens = async () => {
-      const [instaToken, baseToken] = await setAccessToken();
-      setTokens([instaToken, baseToken]);
+    const getItems = async () => {
+      const resItems = await getBaseProducts();
+      setItems(resItems['data']);
     };
-    getTokens();
+
+    const getInsta = async () => {
+       const res = await getInstaImages()
+       setInsta(res)
+    }
+    getItems();
+    getInsta();
   }, []);
+
+  console.log("items", items)
+  console.log("insta", insta)
 
   return (
     <div className="App">
+
       <Navbar/>
       <HeroSection/>
       <About/>
       <Shop/>
       <Footer/>
       <header className="App-header"></header>
-      <TokenContext.Provider value={tokens}>
-      </TokenContext.Provider>
     </div>
   );
 }
