@@ -31,10 +31,7 @@
   align-items: center;
 }
 
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
-}
+
 
 .nav-menu {
   display: grid;
@@ -76,7 +73,7 @@
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 785px) {
   .nav-menu {
     display: none;
   }
@@ -84,7 +81,6 @@
   .nav-menu.active {
     width: 100vw;
     display: flex;
-    height: 60vh;
     position: absolute;
     top: 80px;
     flex-direction: column;
