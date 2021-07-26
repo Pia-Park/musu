@@ -11,7 +11,7 @@ export default function Items(props) {
       (
         <div className="mask">
           <h3 className="caption">{title}</h3>
-          <h3 className="price">{price}</h3>
+          <h3 className="price">{price}円</h3>
         </div>
       )}
     </div>
