@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import Accordion from "./Accordion";
-// import './Shopbox.css';
 import ItemsContainer from "./ItemsContainer";
 
 const INIT_VISIBLE_COUNT = 0;
