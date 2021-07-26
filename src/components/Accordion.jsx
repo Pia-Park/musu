@@ -3,7 +3,7 @@ import './Accordion.css'
 
 export default function Accordion(props) {
   return (
-    <div class="img-box">
+    <div className="img-box">
       <img
         src='/img/shop-img2.jpg'
         alt="taimakazari"
