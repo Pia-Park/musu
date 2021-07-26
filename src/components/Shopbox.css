@@ -9,6 +9,10 @@
     font-weight: 100;
 }
 
+.quote{
+    width: 90vw;
+}
+
 .quote ::before{
     border: none;
     content: "\201C";
@@ -16,7 +20,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-family: 'Noto Serif JP', serif;
     color: #E0E1DD;
-    margin: 20px 20px 0px -20px;
+    margin: 20px 20px 0px -60px;
     float: left;
 }
 
@@ -51,6 +55,7 @@
 }
 
 .show-more-button{
+    width: 90vw;
     font-family: 'Noto Serif JP', serif;
     font-size: 1.4rem;
     display: flex;
@@ -58,4 +63,35 @@
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.arrow{
+    width: 2rem;
+    height: auto;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+    -webkit-filter: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.8));
+}
+
+@media screen and (max-width: 865px) {
+
+    .arrow{
+        width: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 820px) {
+
+    .arrow{
+        width: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .arrow{
+        width: 1rem;
+    }
 }

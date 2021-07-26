@@ -37,10 +37,11 @@
 }
 
 .box-title{
-    font-size: 2.3rem;
-    font-weight: 500;
+    font-size: 2.1rem;
+    font-weight: 400;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.1rem;
 }
 
 .explain{
@@ -59,17 +60,28 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-.fas{
-    font-size: 3rem;
-    color: #FFF59A;
-    padding-left: 1rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+.show-item p{
+    font-size: 1.6rem;
+}
 
+
+
+.arrow{
+    width: 2rem;
+    height: auto;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+    -webkit-filter: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.8));
 }
 
 @media screen and (max-width: 865px) {
 	.text-box{
         padding: 1.2rem;
+    }
+
+    .arrow{
+        width: 1.7rem;
     }
 }
 
@@ -91,9 +103,10 @@
         font-size: 1.4rem;
     }
 
-    .fas{
-        font-size: 2.5rem;
+    .arrow{
+        width: 1.2rem;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -107,4 +120,6 @@
     p{
         font-size: 1.3rem;
     }
+
+
 }

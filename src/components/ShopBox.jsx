@@ -51,7 +51,7 @@ function ShopBox(props) {
       {(items.length > visible) & isOpen ? (
         <button className="show-more-button" onClick={showMoreItemClicked}>
           もっと見る
-          <i className="fas fa-angle-down" />
+          <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
         </button>
       ) : (
         ""
