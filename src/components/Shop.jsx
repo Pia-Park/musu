@@ -12,6 +12,7 @@ function Shop() {
           {productInfo &&
             productInfo.data.map((product) => (
               <ShopBox
+                key={product.title}
                 categoryId={product.categoryId}
                 image={product.image}
                 children={product.description}
