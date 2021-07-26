@@ -34,7 +34,7 @@ function ShopBox(props) {
         handleClick={changeActiveStatus}
       />
 
-      {isOpen ? <div className="shop-detail">{props.children}</div> : ""}
+      {isOpen ? <blockquote className="quote"><div className="shop-detail">{props.children}</div></blockquote> : ""}
 
       <ItemsContainer
         items={items}
@@ -45,7 +45,7 @@ function ShopBox(props) {
       {(items.length > visibleItemsCount) & isOpen ? (
         <button className="show-more-button" onClick={showMoreItemClicked}>
           もっと見る
-          <i className="fas fa-angle-down" />
+          <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
         </button>
       ) : (
         ""
