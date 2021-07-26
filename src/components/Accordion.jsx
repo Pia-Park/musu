@@ -20,9 +20,9 @@ export default function Accordion(props) {
       <button className="show-item" onClick={props.handleClick}>
         <p>{props.isOpen ? "商品ページを閉じる" : "商品ページを開く"}</p>
         {props.isOpen ? (
-          <i className="fas fa-angle-up" />
-        ) : (
-          <i className="fas fa-angle-down" />
+          <i class="fas fa-chevron-up"></i>
+                  ) : (
+          <i class="fas fa-chevron-down"></i>
         )}
       </button>
     </div>
