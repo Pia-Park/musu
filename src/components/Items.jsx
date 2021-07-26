@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Items(props) {
-  const { image, title, price, ...other } = props;
+  const { image, title, price } = props;
 
   return (
     <div className="sample3">
