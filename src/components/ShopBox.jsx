@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Accordion from "./Accordion";
+import './Shopbox.css';
 import ItemsContainer from "./ItemsContainer";
 
 const INIT_VISIBLE_COUNT = 0;
@@ -27,7 +28,7 @@ function ShopBox(props) {
         product={props.product}
       />
 
-      {isOpen ? <div className="shop-detail">{props.children}</div> : ""}
+      {isOpen ? <blockquote className="quote"><div className="shop-detail">{props.children}</div></blockquote> : ""}
 
       <ItemsContainer
         items={props.items}
@@ -38,7 +39,7 @@ function ShopBox(props) {
       {(props.items.length > visibleItemsCount) & isOpen ? (
         <button className="show-more-button" onClick={showMoreItemClicked}>
           もっと見る
-          <i className="fas fa-angle-down" />
+          <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
         </button>
       ) : (
         ""

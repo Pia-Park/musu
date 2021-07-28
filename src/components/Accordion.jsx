@@ -18,10 +18,10 @@ export default function Accordion(props) {
       </div>
       <button className="show-item" onClick={props.handleClick}>
         <p>{props.isOpen ? "商品ページを閉じる" : "商品ページを開く"}</p>
-        {props.isOpen ? (
-          <i className="fas fa-angle-up" />
-        ) : (
-          <i className="fas fa-angle-down" />
+        {props.isOpen ? ( 
+          <img className="arrow" src="/img/arrow-up.png" alt="arrow up"></img>
+          ) : (
+          <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
         )}
       </button>
     </div>

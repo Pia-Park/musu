@@ -1,5 +1,5 @@
 import "./Shop.css";
-import ShopBox from "./ShopBox";
+import ShopBox from "../components/ShopBox";
 import productInfo from "../data/product.json";
 import React ,{ useEffect, useState } from "react";
 import { getBaseProducts } from "../api/baseAPI";
@@ -20,9 +20,7 @@ function Shop() {
   console.log("run1",items);
 
 	return (
-    <section>
-      <div className="shop-container" id="shop">
-        <div className="shop-wrapper">
+    <section className="shop-container" id="shop">
           <h2 className="shop-title">Online Shop</h2>
           {items && productInfo &&
             productInfo.data.map((product) => (
@@ -34,8 +32,6 @@ function Shop() {
                 product={product}
               />
             ))}
-        </div>
-      </div>
     </section>
   );
 }
