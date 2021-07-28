@@ -1,6 +1,7 @@
 import React from "react";
 import Items from "./Items";
 
+
 export default function ItemsContainer(props) {
   const { gridType, items, visibleItemsCount } = props;
 
