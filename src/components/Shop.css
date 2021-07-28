@@ -6,9 +6,13 @@
 
 
 .shop-title {
-	text-align: center;
-	margin-top: 5rem;
-	margin-bottom: 3rem;
+		text-align: center;
+		margin-top: 8rem;
+		font-family: 'Noto Serif JP', serif;
+		font-size: 1.5rem;
+		font-weight: 200;
+		color: #515D66;
+		padding-bottom: 3rem;
 }
 
 .img-box {
