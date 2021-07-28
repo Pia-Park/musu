@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 import "./App.css";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Shop from "./components/Shop";
-import Footer from "./components/Footer";
-import About from "./components/About";
+import Navbar from "./containers/Navbar";
+import HeroSection from "./containers/HeroSection";
+import Shop from "./containers/Shop";
+import Footer from "./containers/Footer";
+import About from "./containers/About";
 import { getBaseProducts } from "./api/baseAPI";
 import { getInstaImages } from "./api/instagramAPI";
 
