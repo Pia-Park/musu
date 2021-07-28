@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import '../App.css';
 import './HeroSection.css';
-import "./slick.css";
-import "./slick-theme.css";
+import '../components/slick.css';
+import "../components/slick-theme.css";
+
 
 
 import Slider from "react-slick";
@@ -27,7 +28,7 @@ export default class SimpleSlider extends Component {
 						<div>
 							<img src={`${process.env.PUBLIC_URL}/img/hero.jpg`} alt="hero" className="hero-container"/>
 						</div>
-					</Slider>			
+					</Slider>
 			</section>
 		);
 	}

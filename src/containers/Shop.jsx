@@ -1,13 +1,11 @@
 import "./Shop.css";
-import ShopBox from "./ShopBox";
+import ShopBox from "../components/ShopBox";
 import productInfo from "../data/product.json";
 
 function Shop() {
 
 	return (
-    <section>
-      <div className="shop-container" id="shop">
-        <div className="shop-wrapper">
+    <section className="shop-container" id="shop">
           <h2 className="shop-title">Online Shop</h2>
           {productInfo &&
             productInfo.data.map((product) => (
@@ -18,8 +16,6 @@ function Shop() {
                 children={product.description}
               />
             ))}
-        </div>
-      </div>
     </section>
   );
 }
