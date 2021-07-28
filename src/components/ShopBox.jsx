@@ -7,7 +7,6 @@ const INIT_VISIBLE_COUNT = 0;
 const VISIBLE_COUNT = 4;
 
 function ShopBox(props) {
-  const [items, setItems] = useState([]);
   const [visibleItemsCount, setVisibleItemsCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,29 +19,23 @@ function ShopBox(props) {
     setVisibleItemsCount((prevValue) => prevValue + 4);
   };
 
-  useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/baseFakeData.json`)
-      .then((res) => res.json())
-      .then((data) => setItems(data.items));
-  }, []);
-
   return (
     <>
       <Accordion
-        image={props.image}
         isOpen={isOpen}
         handleClick={changeActiveStatus}
+        product={props.product}
       />
 
       {isOpen ? <div className="shop-detail">{props.children}</div> : ""}
 
       <ItemsContainer
-        items={items}
+        items={props.items}
         gridType={"base"}
         visibleItemsCount={visibleItemsCount}
       />
 
-      {(items.length > visibleItemsCount) & isOpen ? (
+      {(props.items.length > visibleItemsCount) & isOpen ? (
         <button className="show-more-button" onClick={showMoreItemClicked}>
           もっと見る
           <i className="fas fa-angle-down" />

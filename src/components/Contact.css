@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+
+.contact-container {
+	width: 100%;
+	padding: 4rem;
+	background: #e0e1dd;
+	font-family: 'Noto Serif JP', serif;
+}
+
+.name {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 200;
+}
+
+.profile-detail{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.profile-img {
+	width: 30%;
+	border-radius: 50%;
+	padding: 3rem 5rem;
+}
+.profile-sentence {
+	width: 40%;
+	padding: 3rem 3rem 0 ;
+	line-height: 2rem;
+}
