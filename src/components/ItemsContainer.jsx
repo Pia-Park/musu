@@ -18,8 +18,8 @@ export default function ItemsContainer(props) {
     <div className="items-container" style={{ ...styles }}>
       {items.slice(0, visibleItemsCount).map((item) => (
         <Items
-          key={item.item_id}
-          image={item.img1_origin}
+          key={item.id}
+          image={item.url}
           title={item.title}
           price={item.price}
         />

@@ -3,31 +3,76 @@
 
 .contact-container {
 	width: 100%;
-	padding: 4rem;
+	padding: 5rem 10rem;
 	background: #e0e1dd;
 	font-family: 'Noto Serif JP', serif;
 }
+.profile {
+	width: 100%;
+	display: grid;
+	grid-template-areas:
+	"img name"
+	"img sentence"
+}
 
 .name {
+	/* padding-top: 4rem; */
+	/* background-color: tomato; */
 	font-size: 2rem;
-	text-align: center;
 	font-weight: 200;
+	grid-area: name;
+	/* width: 100%; */
+	display: flex;
+	align-items: center;
 }
 
-.profile-detail{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
 
 .profile-img {
-	width: 30%;
 	border-radius: 50%;
-	padding: 3rem 5rem;
+	padding: 2rem 7rem;
+	grid-area: img;
 }
 .profile-sentence {
-	width: 40%;
-	padding: 3rem 3rem 0 ;
+	font-size: 0.9rem;
+  font-weight: 200;
 	line-height: 2rem;
+	grid-area: sentence;
+	margin-top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.contact-container {
+	padding: 5rem;
+	}
+	.profile-img {
+		padding: 2rem 3rem;
+	}
+}
+
+
+
+@media screen and (max-width: 900px) {
+	.profile {
+		grid-template-areas:
+		"name"
+		"img"
+		"sentence"
+	}
+	.name {
+		justify-content: center;
+	}
+	.profile-img {
+		padding: 5rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.profile-img {
+		padding: 3rem;
+	}
+
+	.name {
+		font-size: 1.5rem;
+	}
+
 }

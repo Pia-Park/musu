@@ -11,6 +11,15 @@ function ShopBox(props) {
   const [visibleItemsCount, setVisibleItemsCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
+  const items = props.items.map(item => {
+    return {
+      id: item.item_id,
+      url: item.img1_origin,
+      title: item.title,
+      price: item.price
+    }
+  })
+
   const changeActiveStatus = () => {
     setVisibleItemsCount(isOpen ? INIT_VISIBLE_COUNT : VISIBLE_COUNT);
     setIsOpen(!isOpen);
@@ -31,7 +40,7 @@ function ShopBox(props) {
       {isOpen ? <blockquote className="quote"><div className="shop-detail">{props.children}</div></blockquote> : ""}
 
       <ItemsContainer
-        items={props.items}
+        items={items}
         gridType={"base"}
         visibleItemsCount={visibleItemsCount}
       />
@@ -42,8 +51,8 @@ function ShopBox(props) {
           <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
         </button>
       ) : (
-        ""
-      )}
+          ""
+        )}
     </>
   );
 }
