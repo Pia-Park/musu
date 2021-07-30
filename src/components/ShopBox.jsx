@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import Accordion from "./Accordion";
-import './Shopbox.css';
+import './ShopBox.css';
 import ItemsContainer from "./ItemsContainer";
 
 const INIT_VISIBLE_COUNT = 0;
@@ -16,7 +15,8 @@ function ShopBox(props) {
       id: item.item_id,
       url: item.img1_origin,
       title: item.title,
-      price: item.price
+      price: item.price,
+      shin: item.stock
     }
   })
 
@@ -48,7 +48,7 @@ function ShopBox(props) {
       {(props.items.length > visibleItemsCount) & isOpen ? (
         <button className="show-more-button" onClick={showMoreItemClicked}>
           もっと見る
-          <img className="arrow" src="/img/arrow-down.png" alt="arrow down"></img>
+          <img className="arrow-down" src="/img/arrow-down.png" alt="arrow down"></img>
         </button>
       ) : (
           ""

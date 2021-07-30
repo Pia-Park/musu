@@ -1,12 +1,12 @@
 import React from "react";
-import './Shopbox.css'
+import "./Items.css"
 
 export default function Items(props) {
   const { image, title, price } = props;
 
   return (
     <div className="sample3">
-      <img src={image} alt="img" />
+      <img src={image} alt="img" className="item-img"/>
       {title && price &&
       (
         <div className="mask">

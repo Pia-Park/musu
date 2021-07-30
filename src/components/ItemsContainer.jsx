@@ -1,21 +1,27 @@
 import React from "react";
 import Items from "./Items";
+import "./ItemsContainer.css"
+import styled from 'styled-components';
+
 
 
 export default function ItemsContainer(props) {
   const { gridType, items, visibleItemsCount } = props;
 
-  const grids = {
-    insta: "repeat(4,1fr)",
-    base: "repeat(4,1fr)",
-  };
+  console.log(items.length)
+  const GridItemContainer = styled.div`
+          grid-template-columns:repeat(4,1fr);
+          grid-template-rows: repeat(${items.slice(0, visibleItemsCount).length / 4},1fr);
 
-  const styles = {
-    gridTemplateColumns: `${grids[gridType]}`,
-  };
+          @media screen and (max-width: 785px) {
+            grid-template-columns:repeat(2,1fr);
+
+            grid-template-rows: repeat(${Math.round(items.slice(0, visibleItemsCount).length / 2)} , 1fr)
+      }
+  `
 
   return (
-    <div className="items-container" style={{ ...styles }}>
+    <GridItemContainer className="items-container">
       {items.slice(0, visibleItemsCount).map((item) => (
         <Items
           key={item.id}
@@ -24,6 +30,6 @@ export default function ItemsContainer(props) {
           price={item.price}
         />
       ))}
-    </div>
+    </GridItemContainer>
   );
 }

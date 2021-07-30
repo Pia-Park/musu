@@ -6,7 +6,7 @@ import { getBaseProducts } from "../api/baseAPI";
 
 
 function Shop() {
-  const [items, setItems] = useState();
+  const [items, setItems] = useState([]);
   // console.log(items);
 
   useEffect(() =>{
@@ -19,13 +19,13 @@ function Shop() {
   },[]);
   console.log("run1",items);
 
-	return (
+  return (
     <section className="shop-container" id="shop">
           <h2 className="shop-title">Online Shop</h2>
-          {items && productInfo &&
+          {productInfo &&
             productInfo.data.map((product) => (
               <ShopBox
-                items={items[product.categoryId]}
+                items={items.length === 0 ?  items : items[product.categoryId]}
                 key={product.title}
                 categoryId={product.categoryId}
                 children={product.description}

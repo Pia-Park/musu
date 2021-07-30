@@ -1,0 +1,14 @@
+.items-container {
+	width: 100%;
+	max-width: 1300px;
+	margin: 20px auto;
+	padding: 0 3rem;
+	display: grid;
+	gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+	.items-container {
+		padding: 0 1rem;
+	}
+}

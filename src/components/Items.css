@@ -1,0 +1,56 @@
+.sample3 {
+	overflow: hidden;
+	position: relative;
+	height: calc((100vw - 6rem - 8rem - 1rem) / 4);
+}
+
+.item-img {
+	width: 100%;
+	height: 100%;
+}
+
+.mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Noto Serif JP", serif;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+}
+
+.sample3:hover .mask {
+	opacity: 1;
+	padding-left: 1rem;
+}
+
+.caption {
+	font-size: 1.5rem;
+	color: #fff;
+	font-weight: 100;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	padding-bottom: 1rem;
+}
+
+.price {
+	letter-spacing: 0.1rem;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: white;
+}
+
+@media screen and (max-width: 784px) {
+	.sample3 {
+		height: calc((100vw - 2rem - 2rem - 1rem) / 2);
+	}
+}
