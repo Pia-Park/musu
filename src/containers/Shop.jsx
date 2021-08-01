@@ -7,7 +7,6 @@ import { getBaseProducts } from "../api/baseAPI";
 
 function Shop() {
   const [items, setItems] = useState([]);
-  // console.log(items);
 
   useEffect(() =>{
     const getItems = async () => {
@@ -17,7 +16,6 @@ function Shop() {
     getItems();
 
   },[]);
-  console.log("run1",items);
 
   return (
     <section className="shop-container" id="shop">

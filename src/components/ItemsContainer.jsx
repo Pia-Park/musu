@@ -8,7 +8,6 @@ import styled from 'styled-components';
 export default function ItemsContainer(props) {
   const { gridType, items, visibleItemsCount } = props;
 
-  console.log(items.length)
   const GridItemContainer = styled.div`
           grid-template-columns:repeat(4,1fr);
           grid-template-rows: repeat(${items.slice(0, visibleItemsCount).length / 4},1fr);

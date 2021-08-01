@@ -5,8 +5,6 @@ import ItemsContainer from '../components/ItemsContainer';
 function Instagram() {
 	const [items, setItems] = useState([]);
 	const VISIBLE_COUNT = 4
-	// console.log(items);
-
 
 	useEffect(() => {
 		const getItems = async () => {
