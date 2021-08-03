@@ -8,6 +8,7 @@
     object-fit: contain;
     overflow: hidden;
     position: relative;
+    margin: auto;
 }
 
 .shop-img {

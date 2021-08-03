@@ -13,7 +13,8 @@ function Contact() {
 			</div>
 			<div className="insta-container">
 				<a href="/" className="insta">
-					<img src="/img/Instagram_Glyph.png" alt="instagram" className="insta-icon" />@ShokoSato</a>
+					<img src="/img/Instagram_icon.png" alt="instagram" className="insta-icon" align="left" />@ShokoSato
+				</a>
 			</div>
 			<Instagram />
 

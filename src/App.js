@@ -18,7 +18,6 @@ function App() {
       <Shop />
       <Contact/>
       <Footer />
-      <header className="App-header"></header>
     </div>
   );
 }

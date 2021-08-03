@@ -30,6 +30,7 @@
 	width: 40vw;
 	grid-area: img;
 }
+
 .profile-sentence {
 	font-size: 0.9rem;
 	font-weight: 200;
@@ -39,7 +40,8 @@
 }
 
 .insta-container {
-	margin: 2rem 3rem;
+	width: 12rem;
+	text-align: center;
 }
 
 .insta {
@@ -48,16 +50,17 @@
 	text-decoration: none;
 	color: inherit;
 }
+
 .insta-icon {
 	height: 1.5rem;
 	width: 1.5rem;
-	padding: 0.5rem 0.5rem 0 0;
 }
 
 @media screen and (max-width: 1100px) {
 	.contact-container {
 		padding: 5rem;
 	}
+
 	.profile-img {
 		padding: 2rem 3rem;
 	}
@@ -73,22 +76,47 @@
 	.name {
 		justify-content: center;
 	}
+
 	.profile-img {
 		margin: 0 auto;
-		/* padding: 2rem; */
 		min-width: 200px;
 	}
+
+	.insta {
+		align-items: center;
+	}
+
 	.insta-container {
-		text-align: center;
+		width: 11.5rem;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contact-container {
+		padding: 3rem;
 	}
 }
 
 @media screen and (max-width: 500px) {
-	/* .profile-img {
-		padding: 3rem;
-	} */
-
 	.name {
 		font-size: 1.5rem;
+	}
+
+	.insta {
+		font-size: 1rem;
+	}
+
+	.insta-icon {
+		height: 1rem;
+		width: 1rem;
+	}
+
+	.contact-container {
+		padding: 1rem;
+	}
+
+	.insta-container {
+		width: 7.5rem;
 	}
 }
