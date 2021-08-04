@@ -20,7 +20,7 @@ export default class SimpleSlider extends Component {
 			autoplaySpeed:3000
 		};
 		return (
-			<section className="hero-wrapper">
+			<section className="hero-wrapper" id="home">
 					<Slider {...settings}>
 						<div>
 							<img src={`${process.env.PUBLIC_URL}/img/main-photo.jpg`} alt="hero" className="hero-container"/>

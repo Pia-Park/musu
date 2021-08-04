@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+
+.contact-container {
+	width: 100%;
+	padding: 1rem 4rem;
+	background: #e0e1dd;
+	font-family: "Noto Serif JP", serif;
+}
+
+.profile {
+	width: 85%;
+	margin: auto;
+	display: grid;
+	padding: 4rem;
+	grid-column-gap: 30px;
+	grid-template-areas:
+		"img name"
+		"img sentence";
+}
+
+.name {
+	font-size: 2rem;
+	font-weight: 200;
+	grid-area: name;
+	display: flex;
+	align-items: center;
+}
+
+.profile-img {
+	border-radius: 50%;
+	/* padding: 2rem 8rem; */
+	width: 240px;
+	max-width: 275px;
+	max-height: 275px;
+	grid-area: img;
+}
+
+.profile-sentence {
+	font-size: 0.9rem;
+	font-weight: 200;
+	line-height: 2rem;
+	grid-area: sentence;
+	margin: 1rem 0;
+}
+
+.insta-container {
+	width: 12rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.insta {
+	font-size: 1.5rem;
+	font-weight: 200;
+	text-decoration: none;
+	color: inherit;
+}
+
+.insta-icon {
+	height: 1.5rem;
+	width: 1.5rem;
+	vertical-align:middle;
+	margin-right: 0.5rem;
+}
+
+/* @media screen and (max-width: 1100px) {
+	.contact-container {
+		padding: 5rem;
+	}
+} */
+
+@media screen and (max-width: 800px) {
+	.contact-container {
+		padding: 1rem;
+	}
+
+	.profile {
+		grid-template-areas:
+			"name"
+			"img"
+			"sentence";
+	}
+	.name {
+		justify-content: center;
+	}
+
+	.profile-img {
+		margin: 2.5rem auto 1rem;
+		min-width: 200px;
+	}
+
+	.insta {
+		align-items: center;
+	}
+
+	.insta-container {
+		width: 11.5rem;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.name {
+		font-size: 1.5rem;
+	}
+
+	.insta {
+		font-size: 1rem;
+	}
+
+	.insta-icon {
+		height: 1rem;
+		width: 1rem;
+	}
+
+	.insta-container {
+		width: 7.5rem;
+	}
+	.profile {
+		padding: 0 0 3rem 0;
+	}
+}
