@@ -1,0 +1,10 @@
+.common-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 1441px) {
+  .common-wrapper {
+    max-width: 1300px;
+  }
+}

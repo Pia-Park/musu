@@ -6,17 +6,14 @@ import Footer from "./containers/Footer";
 import About from "./containers/About";
 import Contact from "./containers/Contact";
 
-
-
 function App() {
-
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
       <About />
       <Shop />
-      <Contact/>
+      <Contact />
       <Footer />
     </div>
   );

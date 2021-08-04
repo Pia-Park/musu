@@ -13,3 +13,9 @@
 	color: #515d66;
 	padding-bottom: 3rem;
 }
+
+@media screen and (max-width: 784px) {
+	.shop-container {
+			padding: 1rem;
+	}
+}
