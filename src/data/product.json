@@ -1,22 +1,30 @@
 {
 	"data": [
 		{
-			"categoryId": 1,
+			"categoryId": 3661481,
 			"title": "大麻飾り",
+			"alt": "taimakazari",
+			"explain": "神聖な祓い清めの装飾で祓い清めることで『元氣』な状態に整います。",
 			"description": "古来より「大麻」は水でも塩でも祓い清められない罪穢れ（氣枯れ）を祓い清める強力な力があるとされています。「麻」は神様のしるし、神様の宿る神聖な繊維とされ飾っていただくと場のエネルギーを見守り「氣」を整えてくれるでしょう。",
-			"image": "shop-taimakazari.png"
+			"image": "/img/shop-img2.jpg"
+
+
 		},
 		{
-			"categoryId": 2,
+			"categoryId": 3661482,
 			"title": "お香",
-			"description": "お香の説明",
-			"image": "shop-okou.png"
+			"alt": "okou",
+			"explain": "仏教伝来とともに伝えられた和の香りが、心身を清浄にし癒しのひとときを感じさせます" ,
+			"description": "古来より「大麻」は水でも塩でも祓い清められない罪穢れ（氣枯れ）を祓い清める強力な力があるとされています。「麻」は神様のしるし、神様の宿る神聖な繊維とされ飾っていただくと場のエネルギーを見守り「氣」を整えてくれるでしょう。",
+			"image": "/img/shop-img2.jpg"
 		},
 		{
-			"categoryId": 3,
+			"categoryId": 3661483,
 			"title": "飾り結び",
-			"description": "飾り結びの説明",
-			"image": "shop-kazarimusubi.png"
+			"alt": "kazarimusubi",
+			"explain": "日本の古くから今に伝え継がれる一本のひもで産みだす伝統的な技芸です。",
+			"description": "古来より「大麻」は水でも塩でも祓い清められない罪穢れ（氣枯れ）を祓い清める強力な力があるとされています。「麻」は神様のしるし、神様の宿る神聖な繊維とされ飾っていただくと場のエネルギーを見守り「氣」を整えてくれるでしょう。",
+			"image": "/img/shop-img2.jpg"
 		}
 	]
 }

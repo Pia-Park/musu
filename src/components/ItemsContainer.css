@@ -1,0 +1,6 @@
+.items-container {
+	width: 85%;
+	margin: 20px auto;
+	display: grid;
+	gap: 1rem;
+}

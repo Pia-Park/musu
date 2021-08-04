@@ -5,16 +5,15 @@ export default function Accordion(props) {
   return (
     <div className="img-box">
       <img
-        src='/img/shop-img2.jpg'
-        alt="taimakazari"
+        src={props.product.image}
+        alt={props.product.alt}
         className="shop-img"
       />
       <img src='/img/bgpattern.png' alt='pattern' className="pattern" />
       <div className="text-box">
-        <div className="box-title">大麻飾り
+        <div className="box-title">{props.product.title}
         </div>
-        <div className="explain">
-        神聖な祓い清めの装飾で祓い清めることで『元氣』な状態に整います。
+        <div className="explain">{props.product.explain}
         </div>
       </div>
       <button className="show-item" onClick={props.handleClick}>
