@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 export default function ItemsContainer(props) {
-  const { gridType, items, visibleItemsCount } = props;
+  const { items, visibleItemsCount } = props;
 
   const GridItemContainer = styled.div`
           grid-template-columns:repeat(4,1fr);
