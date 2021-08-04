@@ -5,15 +5,20 @@
     margin: auto;
     height: 230px;
     min-height: 230px;
+    min-width: 288px;
     max-width: 1440px;
     object-fit: contain;
     overflow: hidden;
     position: relative;
+    margin: auto;
 }
 
 .shop-img {
     width: 100%;
     height: auto;
+    min-height: 230px;
+    object-fit: cover;
+
 }
 
 .pattern {
