@@ -18,7 +18,7 @@ function Contact() {
         <div className="insta-container">
           <a href="/" className="insta">
             <img
-              src="/img/Instagram_Glyph.png"
+              src="/img/Instagram_icon.png"
               alt="instagram"
               className="insta-icon"
             />

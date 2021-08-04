@@ -45,7 +45,7 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     border: none;
     outline: none;
-    width: calc(95% - 6rem);
+    width: 85%;
     padding: 1rem 0;
     margin: 2rem auto;
     background: #505d66;
@@ -63,11 +63,6 @@
     filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.8));
 }
 
-@media screen and (min-width: 1440px) {
-    .show-more-button {
-        width: 1140px;
-    }
-}
 @media screen and (max-width: 1100px) {
     .shop-detail {
         padding: 2rem 15rem;
