@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 
 .img-box {
-    width: 90vw;
+    width: 90%;
+    margin: auto;
     height: 230px;
     min-height: 230px;
     max-width: 1440px;
@@ -137,9 +138,6 @@
         font-size: 1.3rem;
         right: 1.8rem;
         bottom: 1rem;
-    }
-    .shop-container {
-        padding: 0 1rem;
     }
 }
 

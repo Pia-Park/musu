@@ -8,9 +8,11 @@
 }
 
 .profile {
-	width: 100%;
+	width: 85%;
+	margin: auto;
 	display: grid;
 	margin-bottom: 4rem;
+	grid-column-gap: 30px;
 	grid-template-areas:
 		"img name"
 		"img sentence";
@@ -26,8 +28,10 @@
 
 .profile-img {
 	border-radius: 50%;
-	padding: 2rem 8rem;
-	width: 40vw;
+	/* padding: 2rem 8rem; */
+	width: 240px;
+	max-width: 275px;
+	max-height: 275px;
 	grid-area: img;
 }
 .profile-sentence {
@@ -58,9 +62,6 @@
 	.contact-container {
 		padding: 5rem;
 	}
-	.profile-img {
-		padding: 2rem 3rem;
-	}
 }
 
 @media screen and (max-width: 800px) {
@@ -74,8 +75,7 @@
 		justify-content: center;
 	}
 	.profile-img {
-		margin: 0 auto;
-		/* padding: 2rem; */
+		margin: 2.5rem auto 1rem;
 		min-width: 200px;
 	}
 	.insta-container {
@@ -84,10 +84,6 @@
 }
 
 @media screen and (max-width: 500px) {
-	/* .profile-img {
-		padding: 3rem;
-	} */
-
 	.name {
 		font-size: 1.5rem;
 	}

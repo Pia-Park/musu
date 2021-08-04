@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "./Accordion";
-import './ShopBox.css';
+import './Shopbox.css';
 import ItemsContainer from "./ItemsContainer";
 
 const INIT_VISIBLE_COUNT = 0;

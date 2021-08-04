@@ -3,6 +3,7 @@ import ShopBox from "../components/ShopBox";
 import productInfo from "../data/product.json";
 import React ,{ useEffect, useState } from "react";
 import { getBaseProducts } from "../api/baseAPI";
+import CommonWrapper from "../components/CommonWrapper";
 
 
 function Shop() {
@@ -19,6 +20,7 @@ function Shop() {
 
   return (
     <section className="shop-container" id="shop">
+      <CommonWrapper>
           <h2 className="shop-title">Online Shop</h2>
           {productInfo &&
             productInfo.data.map((product) => (
@@ -30,6 +32,7 @@ function Shop() {
                 product={product}
               />
             ))}
+            </CommonWrapper>
     </section>
   );
 }
