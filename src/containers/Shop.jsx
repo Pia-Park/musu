@@ -12,6 +12,7 @@ function Shop() {
     const getItems = async () => {
       const resItems = await getBaseProducts();
       setItems(resItems["data"]);
+      console.log(resItems);
     };
     getItems();
 
