@@ -7,7 +7,7 @@ export default function Items(props) {
 
   return (
     <div className="sample3">
-      <a href={`https://musu.official.ec/items/${id}`}>
+      <a target="_blank" rel="noopener noreferrer" href={`https://musu.official.ec/items/${id}`}>
       <img src={image} alt="img" className="item-img"/>
       {title && price &&
       (
