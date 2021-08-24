@@ -24,6 +24,7 @@ export default function ItemsContainer(props) {
       {items.slice(0, visibleItemsCount).map((item) => (
         <Items
           key={item.id}
+          id={item.id}
           image={item.url}
           title={item.title}
           price={item.price}
