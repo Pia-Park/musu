@@ -16,7 +16,7 @@ function Contact() {
           </p>
         </div>
         <div className="insta-container">
-          <a href="/" className="insta">
+          <a href="https://www.instagram.com/shoko.musuhi/" className="insta">
             <img
               src="/img/Instagram_icon.png"
               alt="instagram"
