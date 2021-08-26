@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 export default function ItemsContainer(props) {
-  const { items, visibleItemsCount } = props;
+  const { items, gridType, visibleItemsCount } = props;
 
   const GridItemContainer = styled.div`
           grid-template-columns:repeat(4,1fr);
@@ -28,6 +28,7 @@ export default function ItemsContainer(props) {
           image={item.url}
           title={item.title}
           price={item.price}
+          type={gridType}
         />
       ))}
     </GridItemContainer>
