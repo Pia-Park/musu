@@ -4,7 +4,7 @@ import "./Items.css"
 const INSTAGRAM = "insta"
 const BASE = "base"
 const BASE_ITEM_URL = "https://musu.official.ec/items/"
-const INSTAGRAM_URL = "https://www.instagram.com/sn_1025/"
+const INSTAGRAM_URL = "https://www.instagram.com/shoko.musuhi/"
 
 export default function Items(props) {
 
