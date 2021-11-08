@@ -23,7 +23,7 @@
 	margin-bottom: 1rem;
 }
 
-.copywrite {
+.copyright {
 	text-align: center;
 	margin-top: 4rem;
 
@@ -33,7 +33,7 @@
 		flex-direction: column;
 		margin-bottom: 1rem;
 	}
-	.copywrite {
+	.copyright {
 		margin-top: 0rem;
 	}
 }

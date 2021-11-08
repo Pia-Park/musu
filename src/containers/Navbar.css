@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 
 .navbar {
   height: 80px;
   display: flex;
   justify-content: center;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
   font-size: 1.2rem;
   font-weight: 200;
   position: fixed;
@@ -18,7 +18,7 @@
   align-items: center;
   height: 100px;
   width: 100vw;
-  background: linear-gradient(#000,rgba(0, 0, 0, 0));
+  background: linear-gradient(#000, rgba(0, 0, 0, 0));
 }
 
 .navbar-logo {
@@ -30,8 +30,6 @@
   display: flex;
   align-items: center;
 }
-
-
 
 .nav-menu {
   display: grid;
@@ -86,12 +84,19 @@
     flex-direction: column;
     background: rgb(35, 35, 35, 0.6);
     z-index: 1;
-    animation-name: slidein; animation-duration: 0.5s;
+    animation-name: slidein;
+    animation-duration: 0.5s;
     text-align: center;
   }
 
-  @keyframes slidein { from { transform: translateX(100vw); } to { transform: translateX(0px); } }
-
+  @keyframes slidein {
+    from {
+      transform: translateX(100vw);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
 
   .nav-links {
     padding: 2rem;
@@ -125,5 +130,4 @@
     color: #fff;
     font-size: 2rem;
   }
-
 }

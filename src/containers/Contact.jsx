@@ -23,7 +23,7 @@ function Contact() {
               alt="instagram"
               className="insta-icon"
             />
-            @ShokoSato
+            <p>@shoko.musuhi</p>
           </a>
         </div>
         <Instagram />

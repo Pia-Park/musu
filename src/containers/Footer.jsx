@@ -6,7 +6,7 @@ function Footer() {
 	return (
 		<section className="footer-wrapper">
 			<div className="footer-container">
-				<h3>musu</h3>
+				<h3>楚々</h3>
 				<ul className="footer-links">
 					<li className="footer-link">Home</li>
 					<li className="footer-link">About</li>
@@ -14,7 +14,7 @@ function Footer() {
 					<li className="footer-link">Contact</li>
 				</ul>
 			</div>
-			<h3 className="copywrite">copywrite@footer information part desu</h3>
+			<h3 className="copyright">Copyright@footer information part desu</h3>
 
 
 		</section>
