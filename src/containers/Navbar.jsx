@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "./Navbar.css"
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-
 function Navbar() {
 	const [click, setClick] = useState(false);
 	const handleClick = () => setClick(!click);
