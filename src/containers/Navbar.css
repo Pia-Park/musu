@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 200;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.logo{
+  width: 9rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  /* background: linear-gradient(#000,rgba(0, 0, 0, 0)); */
+}
+
+.navbar-logo {
+  color: #242424;
+  margin-left: 2.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 3rem;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #242424;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 2px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 785px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    top: 80px;
+    flex-direction: column;
+    background: rgb(35, 35, 35, 0.6);
+    z-index: 1;
+    animation-name: slidein; animation-duration: 0.5s;
+    text-align: center;
+  }
+
+  @keyframes slidein { from { transform: translateX(100vw); } to { transform: translateX(0px); } }
+
+
+  .nav-links {
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 1rem;
+    margin-left: 0px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+}

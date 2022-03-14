@@ -1,0 +1,11 @@
+.hero-container {
+  /* background: url('images/hero.jpg') center center/cover no-repeat; */
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  margin-top: 10vh;
+}
